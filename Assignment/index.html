@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-image: url('hall.webp');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    .header {
+      flex: auto;
+      margin-left: 60px;
+      margin-right: 60px;
+      background-color: white;
+      padding-left: 40px;
+      overflow: hidden;
+      position: relative;
+    }
+    .form {
+      padding-top: 50px;
+      padding-left: 10px;
+      background-color: white;
+    }
+    .main {
+      margin-top: 200px;
+      padding-top: 60px;
+      background-color: white;
+      margin-left: 90px;
+      margin-right: 90px;
+    }
+    .compname {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      /* float: left; */
+      margin-left: 600px;
+      font-size: 60px;
+      /* margin-right: 100px; */
+    }
+    input {
+      background-color: rgba(218, 216, 216, 0.726);
+      border: none;
+    }
+    .container {
+      background-color: black;
+    }
+    .footer-dark {
+      padding: 50px 0;
+      color: #faf9f9;
+      background-color: #000000;
+    }
+
+    .footer-dark h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .footer-dark ul {
+      padding: 0;
+      list-style: none;
+      line-height: 1.6;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .footer-dark ul a {
+      color: inherit;
+      text-decoration: none;
+      opacity: 0.6;
+    }
+
+    .footer-dark ul a:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 767px) {
+      .footer-dark .item:not(.social) {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+    }
+
+    .footer-dark .item.text {
+      margin-bottom: 36px;
+    }
+
+    @media (max-width: 767px) {
+      .footer-dark .item.text {
+        margin-bottom: 0;
+      }
+    }
+
+    .footer-dark .item.text p {
+      opacity: 0.6;
+      margin-bottom: 0;
+    }
+
+    .footer-dark .item.social {
+      text-align: center;
+    }
+
+    @media (max-width: 991px) {
+      .footer-dark .item.social {
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+
+    .footer-dark .item.social > a {
+      font-size: 20px;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+      margin: 0 8px;
+      color: rgb(8, 7, 7);
+      opacity: 0.75;
+    }
+
+    .footer-dark .item.social > a:hover {
+      opacity: 0.9;
+    }
+
+    .footer-dark .copyright {
+      text-align: center;
+      padding-top: 24px;
+      opacity: 0.3;
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+    .card-group {
+      padding: 40px;
+      padding-top: 0px;
+    }
+    .card {
+      margin: 10px;
+    }
+    .card-subtitle {
+      color: rgb(146, 153, 153);
+    }
+    .card-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+    }
+    .card2-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 10;
+      -webkit-box-orient: vertical;
+    }
+    .cardl-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+    }
+    .card2 {
+      padding: 100px;
+    }
+    .multi {
+      padding: 40px;
+    }
+    .hect {
+      padding-left: 40px;
+    }
+    .video {
+      padding: 40px;
+    }
+    .vplayer {
+      padding: 60px;
+      padding-top: 0px;
+      width: 1000px;
+    }
+    .mainheading {
+      color: orange;
+    }
+  </style>
+  <body>
+    <div class="header">
+      <div>
+        <form class="form">
+          <input type="search" placeholder="Search" />
+          <i class="fa fa-search"></i>
+        </form>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Company</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Catagories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacts</a>
+          </li>
+          <li class="compname">
+            <h1>norisys</h1>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="main">
+      <div class="card-group">
+        <div class="card">
+          <img src="md1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">CUBE Series</h4>
+            <h5 class="card-subtitle">
+              modern switches sockets and accessories for residential and
+              commercial buildings
+            </h5>
+            <p class="card-text">
+              CUBE Series is a modular product range which is designed to
+              satisfy the requirements of electrical installations in modern
+              buildings. The range includes switches, sockets, fan regulators &
+              dimmers, hospitality products, communication sockets, acoustic and
+              optical signaling products, cover plates etc. Modules such as
+              switches, sockets etc. are made to a standard size (module) which
+              are mounted on frames. Front plates are available in a variety of
+              colours, materials and finish. The front plates can be changed at
+              any time without disturbing the wiring to adapt to changes in
+              building interiors. Use of engineering grade thermoset materials
+              in CUBE Series products makes the range extremely strong and
+              sturdy with flame proof qualities. The engineering grade thermoset
+              material used in the products has excellent electrical insulation
+              properties and does not catch fire. This ensures that the products
+              are capable of handling higher operating temperatures.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="md2.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">SQUARE Series</h4>
+            <h5 class="card-subtitle">
+              a classic switch range with screw mounting system that lasts many
+              years
+            </h5>
+            <p class="card-text">
+              SQUARE Series products is a design which has evolved over a period
+              of time. Functional qualities and the mounting system is proven
+              and the technology tested. Classic looks of this range makes it a
+              timeless design. Unique feature of this Series is the mounting
+              system. All modules are mounted on frames using screws. This makes
+              the assembly very sturdy. The modules which are mounted by screws
+              can withstand tremendous amount of pressure Back housing of
+              sockets rest on the frame and provides a firm support - required
+              in case of excessive push pressure while inserting plugs. SQUARE
+              Series products retain the special features offered by the company
+              in the past, yet have been redesigned for modernity. Use of
+              thermoset material for the core areas makes the switches and
+              sockets highly durable and capable of handling higher currents.
+            </p>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card2" style="max-width: 100%">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="md3.jpg" class="img-fluid rounded-start" alt="#" />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="card2-text">
+                Norisys Technology Private Limited - a company founded in 1987
+                in India, manufacturing premium electrical switchgear for more
+                than 30 years. Each day Norisys engineers work to bring about a
+                combination of innovative designs and materials using advanced
+                manufacturing technology in order to create products that are
+                best suited to meet user requirements. We continuously strive to
+                upgrade processes and materials. CUBE Series and SQUARE Series
+                products thus offer sound electrical performance. Products such
+                as Modular MCBs and Single Phase Motor Starters are innovations
+                by Norisys, which have today become common household products. A
+                professional of electrical switchgear for the last 25 years,
+                today Norisys constructs innovative switchgear systems at the
+                highest level and has established itself by many years of
+                experience and high quality workmanship. With two product ranges
+                namely CUBE Series and SQUARE Series, makes sure that products
+                are available for highly specific requirements as well. CUBE
+                Series marks the evolution of Norisys' research as it once again
+                focuses on engineering design, especially its environmental
+                qualities, and pivots on the concepts of variability and
+                sustainability, performance and simplicity of use.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="multi">
+        <h4>CUBE Series Multiple Combinations</h4>
+        <img src="md4.jpg" alt="#" />
+      </div>
+      <div class="hect">
+        <h4>CUBE Series features</h4>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="md5.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">Special Designer Plates</h4>
+            <h5 class="card-subtitle">
+              Machined from solid blocks of materials like glass aluminum, hard
+              wood etc.
+            </h5>
+            <p class="card-text">
+              Norisys special material plates set the standards for stylish
+              design combined with top quality materials: Solid Aluminum, Solid
+              Glass, Solid Wood, Solid Marble finish. The classy design creates
+              an exclusive flair owing to the
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="md6.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">Focus on sustainability</h4>
+            <h5 class="card-subtitle">
+              Use of environmentally friendly material and processes
+            </h5>
+            <p class="card-text">
+              It is a constant endeavour at Norisys to design products which are
+              made from environmentally friendly. Reusable plastics are used in
+              making the products as well as in the packaging.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="md7.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">Bi-material frames</h4>
+            <h5 class="card-subtitle">
+              CUBE Series frames use bi-material technology, that make the
+              frames sturdy
+            </h5>
+            <p class="card-text">
+              The bi-material frames are made of a combination of steel and
+              engineering grade plastic. In this design, the steel structure is
+              embedded into plastic. The steel inside gives the bi-material
+              frame a rigid structure while the plastic
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="md8.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">Thermoset material</h4>
+            <h5 class="card-subtitle">
+              Live metal parts enclosed using thermoset material, which does not
+              melt
+            </h5>
+            <p class="card-text">
+              Use of engineering grade thermoset materials in CUBE Series
+              products makes the range extremely strong and sturdy with flame
+              proof qualities. The engineering grade thermoset material used in
+              the products has excellent
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="video">
+        <h4>CUBE Series Presentation</h4>
+        <video class="vplayer" src="video.mp4"></video>
+      </div>
+
+      <div class="hect"><h4>Solutions</h4></div>
+      <div class="card-group">
+        <div class="card">
+          <img src="md9.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">Acoustic Signalling</h4>
+            <h5 class="card-subtitle">
+              Signaling devices mounted with switches for added convenience &
+              style
+            </h5>
+            <p class="card-text">
+              Products like Speakers for Audio Music, Night Light with Dimming
+              Option, Step Marker Lamps, Prismatic Overdoor Bulkhead Indicator
+              etc. when mounted with modular switches provide the necessary
+              convenience in modern
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="md10.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">Communication Sockets</h4>
+            <h5 class="card-subtitle">
+              Communication sockets for high-speed data transmission
+            </h5>
+            <p class="card-text">
+              Good quality data sockets are a prerequisite at all workplaces
+              because of increasing speeds in data transmission. Norisys
+              communication sockets are available for all types of telephone and
+              data connections. Shutters for dust
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="md11.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">Hospitality Products</h4>
+            <h5 class="card-subtitle">
+              Installations that are designed especially for use in the
+              hospitality industry
+            </h5>
+            <p class="card-text">
+              Architecture of modern hotels and hospitals makes the highest
+              demand for design and function of electrical installations.
+              Norisys offers high-end products suited for the hospitality
+              industry. Products like Shaver Sockets, Key Card
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="md12.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">Superior electrical safety</h4>
+            <h5 class="card-subtitle">
+              Products engineered to ensure consistent electrical and thermal
+              properties
+            </h5>
+            <p class="card-text">
+              CUBE Series switches have contacts which provide very high current
+              carrying capacity. The contact design, snap action mechanism,
+              appropriate contact pressure, wiping action between the contacts
+              and use of high
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-group">
+        <div class="card">
+          <img src="md13.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">Modular MCBs</h4>
+            <h5 class="card-subtitle">
+              Tiny MCBs are modular MCBs which can be mounted simply like a
+              switch
+            </h5>
+            <p class="cardl-text">
+              Tiny MCB is a unique product which was first introduced by
+              Norisys, and which has now become a common household product. It
+              is a modular MCB which can be mounted like a switch. These MCBs
+              are front mounted along with switches, sockets, etc. of CUBE
+              Series or SQUARE Series products. Tiny MCB can also be mounted on
+              sunmica sheets of any existing or new
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="md14.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title">Single Phase Motor Starter</h4>
+            <h5 class="card-subtitle">
+              Ideal device for protecting air-conditioners, washing machines,
+              etc. from dangerous overloads.
+            </h5>
+            <p class="cardl-text">
+              Single Phase Motor Starter is a device for switching and
+              protection of appliances such as room air-conditioners,
+              refrigerators, washing machines, computers, water coolers, pumps,
+              etc. up to 25 Amperes. In case of any overload, the Single Phase
+              Motor Starter trips, thereby protecting the appliance from any
+              burn-out. These starters are normally mounted with
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-dark">
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-3 item">
+              <h3 class="mainheading">Company</h3>
+              <ul>
+                <li><a href="#"> Company Philosophy </a></li>
+                <li><a href="#">Research & Development</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#"> Technology</a></li>
+                <li><a href="#"> Career</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3 item">
+              <h3 class="mainheading">Products</h3>
+              <h3>CUBE Series</h3>
+              <ul>
+                <li><a href="#">Switches</a></li>
+                <li><a href="#">Sockets</a></li>
+                <li><a href="#">Fan regulators & Dimmers</a></li>
+                <li><a href="#">Communique & support</a></li>
+                <li><a href="#">Acoustic & Optical Signal</a></li>
+                <li><a href="#">Hospitality Modules</a></li>
+                <li><a href="#">Single Phase Motor Starters</a></li>
+                <li><a href="#">Cover Plates</a></li>
+                <li><a href="#">Modular MCBs</a></li>
+                <li><a href="#">Wiring Boxes</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3 item">
+              <br />
+              <h3>SQUARE Series</h3>
+              <ul>
+                <li><a href="#">Switches</a></li>
+                <li><a href="#">Sockets</a></li>
+                <li><a href="#">Fan regulators & Dimmers</a></li>
+                <li><a href="#">Communique & support</a></li>
+                <li><a href="#">Acoustic & Optical Signal</a></li>
+                <li><a href="#">Hospitality Modules</a></li>
+                <li><a href="#">Single Phase Motor Starters</a></li>
+                <li><a href="#">Cover Plates</a></li>
+                <li><a href="#">Modular MCBs</a></li>
+                <li><a href="#">Wiring Boxes</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3 item">
+              <h3 class="mainheading">Features</h3>
+              <ul>
+                <li><a href="#">Thermoset Material Advantage</a></li>
+                <li><a href="#">Bi-material Frames</a></li>
+                <li><a href="#">Designer Plates</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Electrical Safety</a></li>
+              </ul>
+              <br />
+              <h5 class="mainheading">Contact</h5>
+              <h5 class="mainheading">Catalogues</h5>
+            </div>
+            <div class="col-md-6 item text">
+              <h3>Norisys</h3>
+              <p>
+                Norisys manufactures electrical switchgear accessories that are
+                best suited for residential and commercial applications. Each
+                day Norisys engineers work to bring about a combination of
+                innovative designs and materials using advanced manufacturing
+                technology in order to create products that meet user
+                requirements. Norisys constructs innovative switchgear systems
+                at the highest level and has established itself by many years of
+                experience and high quality workmanship.
+              </p>
+            </div>
+            <div class="col-sm-6 col-md-3 item">
+              <br />
+              <h3>Headquaters</h3>
+              <h3>Norisys Technology Private Limited</h3>
+              <p>14/3, Mathura Road Faridabad- 121 003</p>
+              <p>CIN: U31101DL1987PTC026630</p>
+              <p>Toll free: 1 800 11 1617</p>
+              <p>Telephone:+91 11 49126360</p>
+              <p>WhatsApp:+91 95 600 24771</p>
+              <p>Email: sales@norisys.com</p>
+              <p>Web: www.norisys.com</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
